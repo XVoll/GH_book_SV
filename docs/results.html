@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Section 6 Results | High-resolution spatial modelling of population welfare in El Salvador, Phase II</title>
+  <meta name="description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Section 6 Results | High-resolution spatial modelling of population welfare in El Salvador, Phase II" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Section 6 Results | High-resolution spatial modelling of population welfare in El Salvador, Phase II" />
+  
+  <meta name="twitter:description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples." />
+  
+
+<meta name="author" content="Xavier Vollenweider, Claudio Bosco">
+
+
+<meta name="date" content="2019-07-22">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="fit.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Table of Content</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequesite</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#aims-of-the-analysis"><i class="fa fa-check"></i><b>2.1</b> Aims of the analysis</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#first-look-at-the-data"><i class="fa fa-check"></i><b>2.2</b> First look at the data</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#data_access"><i class="fa fa-check"></i><b>2.3</b> Accessingh the codes and data</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#additional-resources"><i class="fa fa-check"></i><b>2.4</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Data Pre-processing</a><ul>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#sources"><i class="fa fa-check"></i><b>3.1</b> Data sources</a></li>
+<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#loading-the-survey"><i class="fa fa-check"></i><b>3.2</b> Loading the survey</a></li>
+<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#loading-the-vectors"><i class="fa fa-check"></i><b>3.3</b> Loading the vectors</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data.html"><a href="data.html#loading-the-administrative-boundaries"><i class="fa fa-check"></i><b>3.3.1</b> Loading the administrative boundaries</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data.html"><a href="data.html#loading-the-shapefiles-used-as-covariates"><i class="fa fa-check"></i><b>3.3.2</b> Loading the shapefiles used as covariates</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data.html"><a href="data.html#loading-point-referenced-data-from-tables"><i class="fa fa-check"></i><b>3.3.3</b> Loading point-referenced data from tables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data.html"><a href="data.html#loading-the-rasters"><i class="fa fa-check"></i><b>3.4</b> Loading the rasters</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="data.html"><a href="data.html#lights-at-night"><i class="fa fa-check"></i><b>3.4.1</b> Lights at night</a></li>
+<li class="chapter" data-level="3.4.2" data-path="data.html"><a href="data.html#precipitation"><i class="fa fa-check"></i><b>3.4.2</b> Precipitation</a></li>
+<li class="chapter" data-level="3.4.3" data-path="data.html"><a href="data.html#soil-degradation"><i class="fa fa-check"></i><b>3.4.3</b> Soil degradation</a></li>
+<li class="chapter" data-level="3.4.4" data-path="data.html"><a href="data.html#vegetation-greenness"><i class="fa fa-check"></i><b>3.4.4</b> Vegetation greenness</a></li>
+<li class="chapter" data-level="3.4.5" data-path="data.html"><a href="data.html#temperature"><i class="fa fa-check"></i><b>3.4.5</b> Temperature</a></li>
+<li class="chapter" data-level="3.4.6" data-path="data.html"><a href="data.html#slope"><i class="fa fa-check"></i><b>3.4.6</b> Slope</a></li>
+<li class="chapter" data-level="3.4.7" data-path="data.html"><a href="data.html#other-rasters"><i class="fa fa-check"></i><b>3.4.7</b> Other rasters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="data.html"><a href="data.html#rasters-calculation"><i class="fa fa-check"></i><b>3.5</b> Rasters calculation</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="data.html"><a href="data.html#lights-at-night-1"><i class="fa fa-check"></i><b>3.5.1</b> Lights at night</a></li>
+<li class="chapter" data-level="3.5.2" data-path="data.html"><a href="data.html#precipitation-1"><i class="fa fa-check"></i><b>3.5.2</b> Precipitation</a></li>
+<li class="chapter" data-level="3.5.3" data-path="data.html"><a href="data.html#vegetation-greenness-1"><i class="fa fa-check"></i><b>3.5.3</b> Vegetation greenness</a></li>
+<li class="chapter" data-level="3.5.4" data-path="data.html"><a href="data.html#soil-degradation-1"><i class="fa fa-check"></i><b>3.5.4</b> Soil degradation</a></li>
+<li class="chapter" data-level="3.5.5" data-path="data.html"><a href="data.html#temperature-1"><i class="fa fa-check"></i><b>3.5.5</b> Temperature</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="data.html"><a href="data.html#distance-calculation"><i class="fa fa-check"></i><b>3.6</b> Distance calculation</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="data.html"><a href="data.html#distance-to-public-services"><i class="fa fa-check"></i><b>3.6.1</b> Distance to public services</a></li>
+<li class="chapter" data-level="3.6.2" data-path="data.html"><a href="data.html#distance-to-businesses"><i class="fa fa-check"></i><b>3.6.2</b> Distance to businesses</a></li>
+<li class="chapter" data-level="3.6.3" data-path="data.html"><a href="data.html#distance-to-natural-features"><i class="fa fa-check"></i><b>3.6.3</b> Distance to natural features</a></li>
+<li class="chapter" data-level="3.6.4" data-path="data.html"><a href="data.html#stack-distance-maps-and-inspect-results"><i class="fa fa-check"></i><b>3.6.4</b> Stack distance maps and inspect results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="data.html"><a href="data.html#spatial-statistics-at-segmento-level"><i class="fa fa-check"></i><b>3.7</b> Spatial statistics at <em>segmento</em> level</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="data.html"><a href="data.html#adjusting-the-coordinates-reference-system-for-raster-extaction-to-segmento"><i class="fa fa-check"></i><b>3.7.1</b> Adjusting the Coordinates Reference System for raster extaction to <em>segmento</em></a></li>
+<li class="chapter" data-level="3.7.2" data-path="data.html"><a href="data.html#rasters"><i class="fa fa-check"></i><b>3.7.2</b> Rasters</a></li>
+<li class="chapter" data-level="3.7.3" data-path="data.html"><a href="data.html#vectors"><i class="fa fa-check"></i><b>3.7.3</b> Vectors</a></li>
+<li class="chapter" data-level="3.7.4" data-path="data.html"><a href="data.html#normalizing-the-points-covariates"><i class="fa fa-check"></i><b>3.7.4</b> Normalizing the points covariates</a></li>
+<li class="chapter" data-level="3.7.5" data-path="data.html"><a href="data.html#population-density"><i class="fa fa-check"></i><b>3.7.5</b> Population density</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="data.html"><a href="data.html#merging-the-covariates-with-the-ehpm-data"><i class="fa fa-check"></i><b>3.8</b> Merging the covariates with the EHPM data</a></li>
+<li class="chapter" data-level="3.9" data-path="data.html"><a href="data.html#summary"><i class="fa fa-check"></i><b>3.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="explo.html"><a href="explo.html"><i class="fa fa-check"></i><b>4</b> Data exploration</a><ul>
+<li class="chapter" data-level="4.1" data-path="explo.html"><a href="explo.html#outcome-variabes-distribution-and-outliers"><i class="fa fa-check"></i><b>4.1</b> Outcome variabes: distribution and outliers</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="explo.html"><a href="explo.html#income"><i class="fa fa-check"></i><b>4.1.1</b> Income</a></li>
+<li class="chapter" data-level="4.1.2" data-path="explo.html"><a href="explo.html#literacy"><i class="fa fa-check"></i><b>4.1.2</b> Literacy</a></li>
+<li class="chapter" data-level="4.1.3" data-path="explo.html"><a href="explo.html#poverty"><i class="fa fa-check"></i><b>4.1.3</b> Poverty</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="explo.html"><a href="explo.html#correlations-and-collinearity"><i class="fa fa-check"></i><b>4.2</b> Correlations and collinearity</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="explo.html"><a href="explo.html#standardize-the-variables"><i class="fa fa-check"></i><b>4.2.1</b> Standardize the variables</a></li>
+<li class="chapter" data-level="4.2.2" data-path="explo.html"><a href="explo.html#correlation-with-income"><i class="fa fa-check"></i><b>4.2.2</b> Correlation with income</a></li>
+<li class="chapter" data-level="4.2.3" data-path="explo.html"><a href="explo.html#correlation-with-literacy"><i class="fa fa-check"></i><b>4.2.3</b> Correlation with literacy</a></li>
+<li class="chapter" data-level="4.2.4" data-path="explo.html"><a href="explo.html#correlation-with-poverty"><i class="fa fa-check"></i><b>4.2.4</b> Correlation with poverty</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="fit.html"><a href="fit.html"><i class="fa fa-check"></i><b>5</b> Fit the model</a><ul>
+<li class="chapter" data-level="5.1" data-path="fit.html"><a href="fit.html#loading-the-data"><i class="fa fa-check"></i><b>5.1</b> Loading the data</a></li>
+<li class="chapter" data-level="5.2" data-path="fit.html"><a href="fit.html#spatial-dependency-neigbouring-structure"><i class="fa fa-check"></i><b>5.2</b> Spatial dependency: neigbouring structure</a></li>
+<li class="chapter" data-level="5.3" data-path="fit.html"><a href="fit.html#standardizing-the-data"><i class="fa fa-check"></i><b>5.3</b> Standardizing the data</a></li>
+<li class="chapter" data-level="5.4" data-path="fit.html"><a href="fit.html#dimension-reduction-with-jacknife-approach"><i class="fa fa-check"></i><b>5.4</b> Dimension reduction with Jacknife approach</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="fit.html"><a href="fit.html#split-the-sample-into-a-602020-training-validation-and-test-sets"><i class="fa fa-check"></i><b>5.4.1</b> Split the sample into a 60/20/20 training, validation and test sets</a></li>
+<li class="chapter" data-level="5.4.2" data-path="fit.html"><a href="fit.html#write-the-test-formula-without-one-of-the-k23-candidate-covariates"><i class="fa fa-check"></i><b>5.4.2</b> Write the test formula without one of the <span class="math inline">\(k=23\)</span> candidate covariates</a></li>
+<li class="chapter" data-level="5.4.3" data-path="fit.html"><a href="fit.html#fit-the-model-on-the-training-set"><i class="fa fa-check"></i><b>5.4.3</b> Fit the model on the training set</a></li>
+<li class="chapter" data-level="5.4.4" data-path="fit.html"><a href="fit.html#validate-the-model-on-the-validation-set-and-compute-goodness-of-fit-statistics"><i class="fa fa-check"></i><b>5.4.4</b> Validate the model on the validation set and compute goodness of fit statistics</a></li>
+<li class="chapter" data-level="5.4.5" data-path="fit.html"><a href="fit.html#repeat-step-2-to-4-once-for-each-covariate"><i class="fa fa-check"></i><b>5.4.5</b> Repeat step 2 to 4 once for each covariate</a></li>
+<li class="chapter" data-level="5.4.6" data-path="fit.html"><a href="fit.html#drop-the-covariate-in-the-absence-of-which-the-rmse-is-the-lowest"><i class="fa fa-check"></i><b>5.4.6</b> Drop the covariate in the absence of which the RMSE is the lowest</a></li>
+<li class="chapter" data-level="5.4.7" data-path="fit.html"><a href="fit.html#repeat-steps-2-to-6-until-only-8-covariates-are-left"><i class="fa fa-check"></i><b>5.4.7</b> Repeat steps 2 to 6 until only 8 covariates are left</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="fit.html"><a href="fit.html#goodness-of-fit-of-the-model-on-the-test-set"><i class="fa fa-check"></i><b>5.5</b> Goodness of fit of the model on the test set</a></li>
+<li class="chapter" data-level="5.6" data-path="fit.html"><a href="fit.html#literacy-1"><i class="fa fa-check"></i><b>5.6</b> Literacy</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>6</b> Results</a><ul>
+<li class="chapter" data-level="6.1" data-path="results.html"><a href="results.html#income-1"><i class="fa fa-check"></i><b>6.1</b> Income</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="results.html"><a href="results.html#fixed-effects"><i class="fa fa-check"></i><b>6.1.1</b> Fixed effects</a></li>
+<li class="chapter" data-level="6.1.2" data-path="results.html"><a href="results.html#map-the-results"><i class="fa fa-check"></i><b>6.1.2</b> Map the results</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="results.html"><a href="results.html#literacy-2"><i class="fa fa-check"></i><b>6.2</b> Literacy</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="results.html"><a href="results.html#map-the-results-1"><i class="fa fa-check"></i><b>6.2.1</b> Map the results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>7</b> Primer on INLA</a><ul>
+<li class="chapter" data-level="7.1" data-path="theory.html"><a href="theory.html#area-data-vs-point-referenced-data"><i class="fa fa-check"></i><b>7.1</b> Area data vs point-referenced data</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="theory.html"><a href="theory.html#bayesian-approach"><i class="fa fa-check"></i><b>7.1.1</b> Bayesian approach</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="theory.html"><a href="theory.html#model-formulation"><i class="fa fa-check"></i><b>7.2</b> Model formulation</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="theory.html"><a href="theory.html#a-simple-model-not-accounting-for-spatial-dependence"><i class="fa fa-check"></i><b>7.2.1</b> A simple model not accounting for spatial dependence</a></li>
+<li class="chapter" data-level="7.2.2" data-path="theory.html"><a href="theory.html#a-spatial-model"><i class="fa fa-check"></i><b>7.2.2</b> A spatial model</a></li>
+<li class="chapter" data-level="7.2.3" data-path="theory.html"><a href="theory.html#estimating-the-model"><i class="fa fa-check"></i><b>7.2.3</b> Estimating the model</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="http://flowminder.org/" target="blank">Released by Flowminder Foundation</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High-resolution spatial modelling of population welfare in El Salvador, Phase II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1">
+<h1><span class="header-section-number">Section 6</span> Results</h1>
+<p>It is now finally time to look at the results: * marginal effects * spatial random effects * out of sample prediction * map fitted value * overlay with secondary data</p>
+<p>Final outputs will consist of a gridded map indicating predictive values for the indicators of interest, as well as indicators of uncertainty at the grid-cell level. In addition, we provide here code snippets to produce interactive data visualisation, whose results will be discussed and introduced.</p>
+<div id="income-1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Income</h2>
+<div id="fixed-effects" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Fixed effects</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">summary</span>(besag_income)<span class="op">$</span>fixed[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">digits =</span> <span class="dv">2</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">0.025quant</th>
+<th align="right">0.5quant</th>
+<th align="right">0.975quant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>intercept</td>
+<td align="right">3.21</td>
+<td align="right">18.26</td>
+<td align="right">-32.63</td>
+<td align="right">3.21</td>
+<td align="right">39.03</td>
+</tr>
+<tr class="even">
+<td>factor(AREA_ID)R</td>
+<td align="right">1.53</td>
+<td align="right">18.26</td>
+<td align="right">-34.32</td>
+<td align="right">1.53</td>
+<td align="right">37.35</td>
+</tr>
+<tr class="odd">
+<td>factor(AREA_ID)U</td>
+<td align="right">1.68</td>
+<td align="right">18.26</td>
+<td align="right">-34.16</td>
+<td align="right">1.68</td>
+<td align="right">37.50</td>
+</tr>
+<tr class="even">
+<td>lights_med</td>
+<td align="right">0.15</td>
+<td align="right">0.02</td>
+<td align="right">0.11</td>
+<td align="right">0.15</td>
+<td align="right">0.19</td>
+</tr>
+<tr class="odd">
+<td>settlements</td>
+<td align="right">0.04</td>
+<td align="right">0.02</td>
+<td align="right">0.00</td>
+<td align="right">0.04</td>
+<td align="right">0.08</td>
+</tr>
+<tr class="even">
+<td>dist2roadInter</td>
+<td align="right">-0.04</td>
+<td align="right">0.01</td>
+<td align="right">-0.07</td>
+<td align="right">-0.04</td>
+<td align="right">-0.02</td>
+</tr>
+<tr class="odd">
+<td>Shape_Area</td>
+<td align="right">-0.02</td>
+<td align="right">0.01</td>
+<td align="right">-0.04</td>
+<td align="right">-0.02</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td>lc_tree</td>
+<td align="right">-0.04</td>
+<td align="right">0.02</td>
+<td align="right">-0.07</td>
+<td align="right">-0.04</td>
+<td align="right">-0.01</td>
+</tr>
+<tr class="odd">
+<td>soil_deg_SDG_index</td>
+<td align="right">0.02</td>
+<td align="right">0.01</td>
+<td align="right">-0.01</td>
+<td align="right">0.02</td>
+<td align="right">0.04</td>
+</tr>
+<tr class="even">
+<td>dist2tree_r</td>
+<td align="right">-0.02</td>
+<td align="right">0.01</td>
+<td align="right">-0.04</td>
+<td align="right">-0.02</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="odd">
+<td>### Random effects</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rdm_effects=besag_income<span class="op">$</span>summary.random<span class="op">$</span>ID<span class="op">$</span>mean
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>rdm_effects=rdm_effects
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>rdm_effects_tr=<span class="kw">exp</span>(rdm_effects)
+<span class="co">#sp::spplot(segmento_sh_data_model,&quot;rdm_effects_tr&quot;)</span></code></pre></div>
+</div>
+<div id="map-the-results" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Map the results</h3>
+<p>We prepare the data for all <em>segmentos</em></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">MPIO_CANTON_out=segmento_sh_data<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(segmento_sh_data<span class="op">@</span>data<span class="op">$</span>ingpe<span class="op">&gt;</span><span class="dv">400</span>)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">distinct</span>(MPIO,CANTON)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MPIO_CANTON=</span><span class="kw">paste0</span>(MPIO,CANTON))
+
+segmento_sh_data<span class="op">@</span>data=segmento_sh_data<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MPIO_CANTON=</span><span class="kw">paste0</span>(MPIO,CANTON),
+         <span class="dt">top_cantons=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">%in%</span>MPIO_CANTON_out<span class="op">$</span>MPIO_CANTON,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">antiguo_urban=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">==</span><span class="st">&quot;ANTIGUO CUSCATLANAREA URBANA&quot;</span>,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">top_cantons=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">%in%</span>MPIO_CANTON_out<span class="op">$</span>MPIO_CANTON,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">outliers=</span><span class="kw">ifelse</span>(ingpe<span class="op">&gt;</span><span class="kw">quantile</span>(ingpe,<span class="fl">0.99</span>,<span class="dt">na.rm=</span>T),<span class="st">&quot;out&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">top_outliers=</span><span class="kw">ifelse</span>(ingpe<span class="op">&gt;</span><span class="dv">600</span>,<span class="st">&quot;out&quot;</span>,<span class="st">&quot;no&quot;</span>))
+
+ehpm17_predictors=segmento_sh_data_model<span class="op">@</span>data
+
+
+data_df=segmento_sh_data_model<span class="op">@</span>data[,<span class="kw">c</span>(<span class="st">&quot;AREA_ID&quot;</span>,<span class="st">&quot;SEG_ID&quot;</span>,<span class="st">&quot;DEPTO&quot;</span>,<span class="st">&quot;ID&quot;</span>,<span class="st">&quot;top_cantons&quot;</span>,
+                                  <span class="kw">paste</span>(cov_candidates_selected_df<span class="op">$</span>var_income))]
+
+data_df<span class="op">$</span>ID=<span class="kw">as.character</span>(data_df<span class="op">$</span>ID) <span class="co"># turn ID to character to avoid having it standardized</span>
+<span class="co"># covariates_or=data_df %&gt;% </span>
+<span class="co">#   mutate_if(is.character,as.factor)</span>
+<span class="co"># </span>
+<span class="co"># MyStd &lt;- function(x) {(x - mean(x)) / sd(x)} : apply it directly</span>
+
+adj &lt;-<span class="st"> </span>caret<span class="op">::</span><span class="kw">preProcess</span>(data_df, 
+                         <span class="dt">method =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>,
+                                    <span class="st">&quot;scale&quot;</span>),
+                         <span class="dt">verbose =</span> <span class="ot">TRUE</span>)
+adj
+covariates_sd &lt;-<span class="st"> </span><span class="kw">predict</span>(adj, data_df)
+covariates_sd<span class="op">$</span>intercept=<span class="dv">1</span>
+covariates_sd<span class="op">$</span>ID=<span class="kw">as.numeric</span>(covariates_sd<span class="op">$</span>ID)
+
+data_model=<span class="kw">data.frame</span>(<span class="dt">ingpe=</span>segmento_sh_data<span class="op">@</span>data<span class="op">$</span>ingpe,
+                      covariates_sd)
+data_model<span class="op">$</span>pred=data_model<span class="op">$</span>ingpe <span class="co"># create a pred variables equal to ingpe, the outcome variable</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M_map =<span class="st"> </span><span class="kw">inla</span>(<span class="dt">formula=</span>formula_selected, 
+               <span class="dt">family =</span> <span class="st">&quot;gamma&quot;</span>, 
+               <span class="dt">data =</span> data_model,
+               <span class="dt">control.compute=</span><span class="kw">list</span>(<span class="dt">dic=</span>T, <span class="dt">cpo=</span>F),
+                <span class="dt">control.predictor =</span> <span class="kw">list</span>(<span class="dt">compute=</span>T,<span class="dt">link=</span><span class="dv">1</span>),
+               <span class="dt">control.inla =</span><span class="kw">list</span>(<span class="dt">int.strategy =</span> <span class="st">&quot;eb&quot;</span>)
+)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(data_model)
+pred_seg=<span class="kw">which</span>(<span class="kw">is.na</span>(data_model<span class="op">$</span>ingpe))
+M_map_fit=M_map<span class="op">$</span>summary.fitted.values[,<span class="st">&quot;mean&quot;</span>]
+
+M_map_sd=M_map<span class="op">$</span>summary.fitted.values[,<span class="st">&quot;sd&quot;</span>]
+
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_fit=M_map_fit
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_sd=M_map_sd
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>coef_var=(segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_sd<span class="op">/</span>segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_fit)<span class="op">*</span><span class="dv">100</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">segmento_wgs_income=sp<span class="op">::</span><span class="kw">spTransform</span>(segmento_sh_data_model,
+                            <span class="st">&quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&quot;</span>)
+
+segmento_wgs_income<span class="op">@</span>data=segmento_wgs_income<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(DEPTO,MPIO,CANTON,ingpe,besag_fit,besag_sd,coef_var,lights_med,gpw_es_TOT,dist2allpubserv,dist2biz,slope,n_obs)
+
+rgdal<span class="op">::</span><span class="kw">writeOGR</span>(segmento_wgs_income,
+                <span class="kw">paste0</span>(dir_data,
+                       <span class="st">&quot;out/map/segmentos_besag_income.geojson&quot;</span>),
+                <span class="dt">driver =</span> <span class="st">&quot;GeoJSON&quot;</span>,
+                <span class="dt">layer =</span> <span class="dv">1</span>,
+                <span class="dt">overwrite_layer=</span>T)
+<span class="co"># leaflet(all_SEG_simplified)%&gt;%</span>
+<span class="co">#   addPolygons(weight = 0,  # thickness of the line of the border of each  segmento</span>
+<span class="co">#               smoothFactor = 1, # simplifiy the shapefile in order to speed up rendering of the map on the screen</span>
+<span class="co">#               opacity = 0, # opacity of the segmento border lines</span>
+<span class="co">#               fillOpacity = 1, # opacity of the segmento areas</span>
+<span class="co">#               fillColor = ~colorQuantile(&quot;RdYlGn&quot;, besag_fit)(besag_fit)) # color of the segmento areas: a palette of Greens set)</span></code></pre></div>
+<div class="figure">
+<img src="docs/SV_mapping_files/figure-html/Income_fit.png" alt="Average Income per capita" />
+<p class="caption">Average Income per capita</p>
+</div>
+<div class="figure">
+<img src="docs/SV_mapping_files/figure-html/Income_cv.png" alt="Average Income per capita" />
+<p class="caption">Average Income per capita</p>
+</div>
+</div>
+</div>
+<div id="literacy-2" class="section level2">
+<h2><span class="header-section-number">6.2</span> Literacy</h2>
+<div id="map-the-results-1" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Map the results</h3>
+<p>We prepare the data for all <em>segmentos</em></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cov_candidates_selected_df=<span class="kw">read.table</span>(<span class="kw">paste0</span>(dir_data,
+                                             <span class="st">&quot;out/distance_corr_var/literacy.txt&quot;</span>),
+                                      <span class="dt">header =</span>T)
+
+
+
+MPIO_CANTON_out=segmento_sh_data<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(segmento_sh_data<span class="op">@</span>data<span class="op">$</span>ingpe<span class="op">&gt;</span><span class="dv">400</span>)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">distinct</span>(MPIO,CANTON)<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MPIO_CANTON=</span><span class="kw">paste0</span>(MPIO,CANTON))
+
+segmento_sh_data<span class="op">@</span>data=segmento_sh_data<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MPIO_CANTON=</span><span class="kw">paste0</span>(MPIO,CANTON),
+         <span class="dt">top_cantons=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">%in%</span>MPIO_CANTON_out<span class="op">$</span>MPIO_CANTON,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">antiguo_urban=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">==</span><span class="st">&quot;ANTIGUO CUSCATLANAREA URBANA&quot;</span>,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">top_cantons=</span><span class="kw">ifelse</span>(MPIO_CANTON<span class="op">%in%</span>MPIO_CANTON_out<span class="op">$</span>MPIO_CANTON,<span class="st">&quot;yes&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">outliers=</span><span class="kw">ifelse</span>(ingpe<span class="op">&gt;</span><span class="kw">quantile</span>(ingpe,<span class="fl">0.99</span>,<span class="dt">na.rm=</span>T),<span class="st">&quot;out&quot;</span>,<span class="st">&quot;no&quot;</span>),
+         <span class="dt">top_outliers=</span><span class="kw">ifelse</span>(ingpe<span class="op">&gt;</span><span class="dv">600</span>,<span class="st">&quot;out&quot;</span>,<span class="st">&quot;no&quot;</span>))
+
+ehpm17_predictors=segmento_sh_data_model<span class="op">@</span>data
+
+data_df=segmento_sh_data_model<span class="op">@</span>data[,<span class="kw">c</span>(<span class="st">&quot;AREA_ID&quot;</span>,<span class="st">&quot;SEG_ID&quot;</span>,<span class="st">&quot;DEPTO&quot;</span>,<span class="st">&quot;ID&quot;</span>,<span class="st">&quot;top_cantons&quot;</span>,
+                                  <span class="kw">paste</span>(cov_candidates_selected_df<span class="op">$</span>var_literacy))]
+
+data_df<span class="op">$</span>ID=<span class="kw">as.character</span>(data_df<span class="op">$</span>ID) <span class="co"># turn ID to character to avoid having it standardized</span>
+<span class="co"># covariates_or=data_df %&gt;% </span>
+<span class="co">#   mutate_if(is.character,as.factor)</span>
+<span class="co"># </span>
+<span class="co"># MyStd &lt;- function(x) {(x - mean(x)) / sd(x)} : apply it directly</span>
+
+adj &lt;-<span class="st"> </span>caret<span class="op">::</span><span class="kw">preProcess</span>(data_df, 
+                         <span class="dt">method =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>,
+                                    <span class="st">&quot;scale&quot;</span>),
+                         <span class="dt">verbose =</span> <span class="ot">TRUE</span>)
+adj
+covariates_sd &lt;-<span class="st"> </span><span class="kw">predict</span>(adj, data_df)
+covariates_sd<span class="op">$</span>intercept=<span class="dv">1</span>
+covariates_sd<span class="op">$</span>ID=<span class="kw">as.numeric</span>(covariates_sd<span class="op">$</span>ID)
+
+data_model=<span class="kw">data.frame</span>(<span class="dt">illiteracy_rate=</span><span class="dv">1</span><span class="op">-</span>segmento_sh_data<span class="op">@</span>data<span class="op">$</span>literacy_rate,
+                      covariates_sd)
+data_model<span class="op">$</span>illiteracy_rate=data_model<span class="op">$</span>illiteracy_rate<span class="op">+</span><span class="dv">1</span><span class="op">/</span><span class="dv">10000</span>
+data_model<span class="op">$</span>pred=data_model<span class="op">$</span>illiteracy_rate <span class="co"># create a pred variables equal to ingpe, the outcome variable</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">formula_lit=pred <span class="op">~</span><span class="st"> </span><span class="op">-</span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>intercept <span class="op">+</span><span class="st"> </span><span class="kw">factor</span>(DEPTO)<span class="op">+</span>dist2biz<span class="op">+</span>lc_tree<span class="op">+</span>
+<span class="st">  </span>dist2road<span class="op">+</span>dens_all_roads<span class="op">+</span>chirps_ev_sd<span class="op">+</span>dist2tree_r<span class="op">+</span>temp_median <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">f</span>(ID, <span class="dt">model =</span> <span class="st">&quot;besag&quot;</span>, 
+    <span class="dt">graph =</span> Segmento.Inla.nb, <span class="dt">scale.model =</span> <span class="ot">TRUE</span>)
+
+
+M_map_lit =<span class="st"> </span>INLA<span class="op">::</span><span class="kw">inla</span>(<span class="dt">formula=</span>formula_lit, 
+             <span class="dt">family =</span> <span class="st">&quot;beta&quot;</span>, 
+             <span class="dt">data =</span> data_model,
+             <span class="dt">control.compute=</span><span class="kw">list</span>(<span class="dt">dic=</span>T, <span class="dt">cpo=</span>F),
+             <span class="dt">control.predictor =</span> <span class="kw">list</span>(<span class="dt">compute=</span>T,<span class="dt">link=</span><span class="dv">1</span>),
+             <span class="dt">control.inla =</span><span class="kw">list</span>(<span class="dt">int.strategy =</span> <span class="st">&quot;eb&quot;</span>)
+)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(data_model)
+pred_seg=<span class="kw">which</span>(<span class="kw">is.na</span>(data_model<span class="op">$</span>illiteracy_rate))
+M_map_lit_fit=M_map_lit<span class="op">$</span>summary.fitted.values[,<span class="st">&quot;mean&quot;</span>]
+
+M_map_lit_sd=M_map_lit<span class="op">$</span>summary.fitted.values[,<span class="st">&quot;sd&quot;</span>]
+
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_fit_lit=M_map_lit_fit
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_sd_lit=M_map_lit_sd
+segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>coef_var_lit=(segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_sd_lit<span class="op">/</span>segmento_sh_data_model<span class="op">@</span>data<span class="op">$</span>besag_fit_lit)<span class="op">*</span><span class="dv">100</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">segmento_wgs_fitted=sp<span class="op">::</span><span class="kw">spTransform</span>(segmento_sh_data_model,
+                            <span class="st">&quot;+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0&quot;</span>)
+
+segmento_wgs_fitted<span class="op">@</span>data=segmento_wgs_fitted<span class="op">@</span>data<span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(DEPTO,MPIO,CANTON,besag_fit_lit,besag_sd_lit,coef_var_lit,lights_med,gpw_es_TOT,dist2allpubserv,dist2biz,slope,n_obs)
+
+rgdal<span class="op">::</span><span class="kw">writeOGR</span>(segmento_wgs_fitted,
+                <span class="kw">paste0</span>(dir_data,
+                       <span class="st">&quot;out/map/segmentos_besag_lit.geojson&quot;</span>),
+                <span class="dt">driver =</span> <span class="st">&quot;GeoJSON&quot;</span>,
+                <span class="dt">layer =</span> <span class="dv">1</span>,
+                <span class="dt">overwrite_layer=</span>T)
+<span class="co"># leaflet(all_SEG_simplified)%&gt;%</span>
+<span class="co">#   addPolygons(weight = 0,  # thickness of the line of the border of each  segmento</span>
+<span class="co">#               smoothFactor = 1, # simplifiy the shapefile in order to speed up rendering of the map on the screen</span>
+<span class="co">#               opacity = 0, # opacity of the segmento border lines</span>
+<span class="co">#               fillOpacity = 1, # opacity of the segmento areas</span>
+<span class="co">#               fillColor = ~colorQuantile(&quot;RdYlGn&quot;, besag_fit)(besag_fit)) # color of the segmento areas: a palette of Greens set)</span></code></pre></div>
+<div class="figure">
+<img src="docs/SV_mapping_files/figure-html/illiteracy_rate_fit.png" alt="Percentage illiteracy rate" />
+<p class="caption">Percentage illiteracy rate</p>
+</div>
+<p><img src="docs/SV_mapping_files/figure-html/illiteracy_rate_sd.png" alt="Model prediction Standard errors" /> <img src="docs/SV_mapping_files/figure-html/illiteracy_rate_coeff_var.png" alt="Model prediction Coeff var" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="fit.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["SV_mapping.pdf", "SV_mapping.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
