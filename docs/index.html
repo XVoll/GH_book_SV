@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>High-resolution spatial modelling of population welfare in El Salvador, Phase II</title>
-  <meta name="description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>High-resolution spatial modelling of population welfare in El Salvador, a coding tutorial</title>
+  <meta name="description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="High-resolution spatial modelling of population welfare in El Salvador, Phase II" />
+  <meta property="og:title" content="High-resolution spatial modelling of population welfare in El Salvador, a coding tutorial" />
   <meta property="og:type" content="book" />
   
   
@@ -17,23 +16,23 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="High-resolution spatial modelling of population welfare in El Salvador, Phase II" />
+  <meta name="twitter:title" content="High-resolution spatial modelling of population welfare in El Salvador, a coding tutorial" />
   
   <meta name="twitter:description" content="This is report provides a tutorial to conduct proof-of-concept high-resolution maps of poverty, average income and literacy. The emphasis is put on providing replicable code exemples." />
   
 
-<meta name="author" content="Xavier Vollenweider, Claudio Bosco">
+<meta name="author" content="Xavier Vollenweider, Claudio Bosco" />
 
 
-<meta name="date" content="2019-07-23">
+<meta name="date" content="2019-12-04" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
 
-<link rel="next" href="intro.html">
+<link rel="next" href="overview.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -67,19 +69,16 @@
 <li><a href="./">Table of Content</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequesite</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#aims-of-the-analysis"><i class="fa fa-check"></i><b>2.1</b> Aims of the analysis</a></li>
-<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#first-look-at-the-data"><i class="fa fa-check"></i><b>2.2</b> First look at the data</a></li>
-<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#data_access"><i class="fa fa-check"></i><b>2.3</b> Accessingh the codes and data</a></li>
-<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#additional-resources"><i class="fa fa-check"></i><b>2.4</b> Additional resources</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Overview</a><ul>
+<li class="chapter" data-level="2.1" data-path="overview.html"><a href="overview.html#first-look-at-the-data"><i class="fa fa-check"></i><b>2.1</b> First look at the data</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Data Pre-processing</a><ul>
 <li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#sources"><i class="fa fa-check"></i><b>3.1</b> Data sources</a></li>
 <li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#loading-the-survey"><i class="fa fa-check"></i><b>3.2</b> Loading the survey</a></li>
 <li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#loading-the-vectors"><i class="fa fa-check"></i><b>3.3</b> Loading the vectors</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="data.html"><a href="data.html#loading-the-administrative-boundaries"><i class="fa fa-check"></i><b>3.3.1</b> Loading the administrative boundaries</a></li>
-<li class="chapter" data-level="3.3.2" data-path="data.html"><a href="data.html#loading-the-shapefiles-used-as-covariates"><i class="fa fa-check"></i><b>3.3.2</b> Loading the shapefiles used as covariates</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data.html"><a href="data.html#loading-the-shapefiles-containing-fields-used-as-covariates"><i class="fa fa-check"></i><b>3.3.2</b> Loading the shapefiles containing fields used as covariates</a></li>
 <li class="chapter" data-level="3.3.3" data-path="data.html"><a href="data.html#loading-point-referenced-data-from-tables"><i class="fa fa-check"></i><b>3.3.3</b> Loading point-referenced data from tables</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="data.html"><a href="data.html#loading-the-rasters"><i class="fa fa-check"></i><b>3.4</b> Loading the rasters</a><ul>
@@ -108,75 +107,74 @@
 <li class="chapter" data-level="3.7.1" data-path="data.html"><a href="data.html#adjusting-the-coordinates-reference-system-for-raster-extaction-to-segmento"><i class="fa fa-check"></i><b>3.7.1</b> Adjusting the Coordinates Reference System for raster extaction to <em>segmento</em></a></li>
 <li class="chapter" data-level="3.7.2" data-path="data.html"><a href="data.html#rasters"><i class="fa fa-check"></i><b>3.7.2</b> Rasters</a></li>
 <li class="chapter" data-level="3.7.3" data-path="data.html"><a href="data.html#vectors"><i class="fa fa-check"></i><b>3.7.3</b> Vectors</a></li>
-<li class="chapter" data-level="3.7.4" data-path="data.html"><a href="data.html#normalizing-the-points-covariates"><i class="fa fa-check"></i><b>3.7.4</b> Normalizing the points covariates</a></li>
-<li class="chapter" data-level="3.7.5" data-path="data.html"><a href="data.html#population-density"><i class="fa fa-check"></i><b>3.7.5</b> Population density</a></li>
+<li class="chapter" data-level="3.7.4" data-path="data.html"><a href="data.html#population-density"><i class="fa fa-check"></i><b>3.7.4</b> Population density</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="data.html"><a href="data.html#merging-the-covariates-with-the-ehpm-data"><i class="fa fa-check"></i><b>3.8</b> Merging the covariates with the EHPM data</a></li>
 <li class="chapter" data-level="3.9" data-path="data.html"><a href="data.html#summary"><i class="fa fa-check"></i><b>3.9</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="explo.html"><a href="explo.html"><i class="fa fa-check"></i><b>4</b> Data exploration</a><ul>
+<li class="chapter" data-level="4" data-path="explo.html"><a href="explo.html"><i class="fa fa-check"></i><b>4</b> Data exploration and preselection of covariates</a><ul>
 <li class="chapter" data-level="4.1" data-path="explo.html"><a href="explo.html#outcome-variabes-distribution-and-outliers"><i class="fa fa-check"></i><b>4.1</b> Outcome variabes: distribution and outliers</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="explo.html"><a href="explo.html#income"><i class="fa fa-check"></i><b>4.1.1</b> Income</a></li>
 <li class="chapter" data-level="4.1.2" data-path="explo.html"><a href="explo.html#literacy"><i class="fa fa-check"></i><b>4.1.2</b> Literacy</a></li>
-<li class="chapter" data-level="4.1.3" data-path="explo.html"><a href="explo.html#poverty"><i class="fa fa-check"></i><b>4.1.3</b> Poverty</a></li>
+<li class="chapter" data-level="4.1.3" data-path="explo.html"><a href="explo.html#moderate-poverty"><i class="fa fa-check"></i><b>4.1.3</b> Moderate Poverty</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="explo.html"><a href="explo.html#correlations-and-collinearity"><i class="fa fa-check"></i><b>4.2</b> Correlations and collinearity</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="explo.html"><a href="explo.html#standardize-the-variables"><i class="fa fa-check"></i><b>4.2.1</b> Standardize the variables</a></li>
-<li class="chapter" data-level="4.2.2" data-path="explo.html"><a href="explo.html#correlation-with-income"><i class="fa fa-check"></i><b>4.2.2</b> Correlation with income</a></li>
-<li class="chapter" data-level="4.2.3" data-path="explo.html"><a href="explo.html#correlation-with-literacy"><i class="fa fa-check"></i><b>4.2.3</b> Correlation with literacy</a></li>
-<li class="chapter" data-level="4.2.4" data-path="explo.html"><a href="explo.html#correlation-with-poverty"><i class="fa fa-check"></i><b>4.2.4</b> Correlation with poverty</a></li>
+<li class="chapter" data-level="4.2" data-path="explo.html"><a href="explo.html#unsupervised-dimension-reduction-based-on-distance-correlation"><i class="fa fa-check"></i><b>4.2</b> Unsupervised dimension reduction based on distance correlation</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="explo.html"><a href="explo.html#obtaining-a-dataframe-with-standardized-covariates"><i class="fa fa-check"></i><b>4.2.1</b> Obtaining a dataframe with standardized covariates</a></li>
+<li class="chapter" data-level="4.2.2" data-path="explo.html"><a href="explo.html#dimension-reduction-based-on-distance-correlation"><i class="fa fa-check"></i><b>4.2.2</b> Dimension reduction based on distance correlation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="fit.html"><a href="fit.html"><i class="fa fa-check"></i><b>5</b> Fit the model</a><ul>
-<li class="chapter" data-level="5.1" data-path="fit.html"><a href="fit.html#loading-the-data"><i class="fa fa-check"></i><b>5.1</b> Loading the data</a></li>
-<li class="chapter" data-level="5.2" data-path="fit.html"><a href="fit.html#spatial-dependency-neigbouring-structure"><i class="fa fa-check"></i><b>5.2</b> Spatial dependency: neigbouring structure</a></li>
-<li class="chapter" data-level="5.3" data-path="fit.html"><a href="fit.html#standardizing-the-data"><i class="fa fa-check"></i><b>5.3</b> Standardizing the data</a></li>
-<li class="chapter" data-level="5.4" data-path="fit.html"><a href="fit.html#dimension-reduction-with-jacknife-approach"><i class="fa fa-check"></i><b>5.4</b> Dimension reduction with Jacknife approach</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="fit.html"><a href="fit.html#split-the-sample-into-a-602020-training-validation-and-test-sets"><i class="fa fa-check"></i><b>5.4.1</b> Split the sample into a 60/20/20 training, validation and test sets</a></li>
-<li class="chapter" data-level="5.4.2" data-path="fit.html"><a href="fit.html#write-the-test-formula-without-one-of-the-k23-candidate-covariates"><i class="fa fa-check"></i><b>5.4.2</b> Write the test formula without one of the <span class="math inline">\(k=23\)</span> candidate covariates</a></li>
-<li class="chapter" data-level="5.4.3" data-path="fit.html"><a href="fit.html#fit-the-model-on-the-training-set"><i class="fa fa-check"></i><b>5.4.3</b> Fit the model on the training set</a></li>
-<li class="chapter" data-level="5.4.4" data-path="fit.html"><a href="fit.html#validate-the-model-on-the-validation-set-and-compute-goodness-of-fit-statistics"><i class="fa fa-check"></i><b>5.4.4</b> Validate the model on the validation set and compute goodness of fit statistics</a></li>
-<li class="chapter" data-level="5.4.5" data-path="fit.html"><a href="fit.html#repeat-step-2-to-4-once-for-each-covariate"><i class="fa fa-check"></i><b>5.4.5</b> Repeat step 2 to 4 once for each covariate</a></li>
-<li class="chapter" data-level="5.4.6" data-path="fit.html"><a href="fit.html#drop-the-covariate-in-the-absence-of-which-the-rmse-is-the-lowest"><i class="fa fa-check"></i><b>5.4.6</b> Drop the covariate in the absence of which the RMSE is the lowest</a></li>
-<li class="chapter" data-level="5.4.7" data-path="fit.html"><a href="fit.html#repeat-steps-2-to-6-until-only-8-covariates-are-left"><i class="fa fa-check"></i><b>5.4.7</b> Repeat steps 2 to 6 until only 8 covariates are left</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="fit.html"><a href="fit.html#goodness-of-fit-of-the-model-on-the-test-set"><i class="fa fa-check"></i><b>5.5</b> Goodness of fit of the model on the test set</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="fit.html"><a href="fit.html#segmento-level"><i class="fa fa-check"></i><b>5.5.1</b> <em>Segmento</em> level</a></li>
-<li class="chapter" data-level="5.5.2" data-path="fit.html"><a href="fit.html#municipio-level"><i class="fa fa-check"></i><b>5.5.2</b> <em>Municipio</em> level</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="fit.html"><a href="fit.html#literacy-1"><i class="fa fa-check"></i><b>5.6</b> Literacy</a><ul>
-<li class="chapter" data-level="5.6.1" data-path="fit.html"><a href="fit.html#model-fitting"><i class="fa fa-check"></i><b>5.6.1</b> Model fitting</a></li>
-<li class="chapter" data-level="5.6.2" data-path="fit.html"><a href="fit.html#goodness-of-fit-at-the-segmento-level"><i class="fa fa-check"></i><b>5.6.2</b> Goodness of fit at the <em>segmento</em> level</a></li>
-<li class="chapter" data-level="5.6.3" data-path="fit.html"><a href="fit.html#goodness-of-fit-at-the-municipio-level"><i class="fa fa-check"></i><b>5.6.3</b> Goodness of fit at the <em>municipio</em> level</a></li>
+<li class="chapter" data-level="4.3" data-path="explo.html"><a href="explo.html#correlations-between-predictors-and-the-outcome-variables"><i class="fa fa-check"></i><b>4.3</b> Correlations between predictors and the outcome variables</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="explo.html"><a href="explo.html#correlation-with-income"><i class="fa fa-check"></i><b>4.3.1</b> Correlation with income</a></li>
+<li class="chapter" data-level="4.3.2" data-path="explo.html"><a href="explo.html#correlation-with-literacy"><i class="fa fa-check"></i><b>4.3.2</b> Correlation with literacy</a></li>
+<li class="chapter" data-level="4.3.3" data-path="explo.html"><a href="explo.html#correlation-with-poverty"><i class="fa fa-check"></i><b>4.3.3</b> Correlation with poverty</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>6</b> Results</a><ul>
-<li class="chapter" data-level="6.1" data-path="results.html"><a href="results.html#income-1"><i class="fa fa-check"></i><b>6.1</b> Income</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="results.html"><a href="results.html#fixed-effects"><i class="fa fa-check"></i><b>6.1.1</b> Fixed effects</a></li>
-<li class="chapter" data-level="6.1.2" data-path="results.html"><a href="results.html#random-effects"><i class="fa fa-check"></i><b>6.1.2</b> Random effects</a></li>
-<li class="chapter" data-level="6.1.3" data-path="results.html"><a href="results.html#map-the-results"><i class="fa fa-check"></i><b>6.1.3</b> Map the results</a></li>
+<li class="chapter" data-level="5" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>5</b> Primer on INLA</a><ul>
+<li class="chapter" data-level="5.1" data-path="theory.html"><a href="theory.html#area-data-vs-point-referenced-data"><i class="fa fa-check"></i><b>5.1</b> Area data vs point-referenced data</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="theory.html"><a href="theory.html#bayesian-approach"><i class="fa fa-check"></i><b>5.1.1</b> Bayesian approach</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="results.html"><a href="results.html#literacy-2"><i class="fa fa-check"></i><b>6.2</b> Literacy</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="results.html"><a href="results.html#map-the-results-1"><i class="fa fa-check"></i><b>6.2.1</b> Map the results</a></li>
+<li class="chapter" data-level="5.2" data-path="theory.html"><a href="theory.html#model-formulation"><i class="fa fa-check"></i><b>5.2</b> Model formulation</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="theory.html"><a href="theory.html#a-simple-model-not-accounting-for-spatial-dependence"><i class="fa fa-check"></i><b>5.2.1</b> A simple model not accounting for spatial dependence</a></li>
+<li class="chapter" data-level="5.2.2" data-path="theory.html"><a href="theory.html#a-spatial-model"><i class="fa fa-check"></i><b>5.2.2</b> A spatial model</a></li>
+<li class="chapter" data-level="5.2.3" data-path="theory.html"><a href="theory.html#estimating-the-model-with-aeral-data"><i class="fa fa-check"></i><b>5.2.3</b> Estimating the model with aeral data</a></li>
+<li class="chapter" data-level="5.2.4" data-path="theory.html"><a href="theory.html#estimating-the-model-with-point-referenced-data"><i class="fa fa-check"></i><b>5.2.4</b> Estimating the model with point-referenced data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>7</b> Discussion</a><ul>
-<li class="chapter" data-level="7.1" data-path="discussion.html"><a href="discussion.html#summary-1"><i class="fa fa-check"></i><b>7.1</b> Summary</a></li>
-<li class="chapter" data-level="7.2" data-path="discussion.html"><a href="discussion.html#possible-applications"><i class="fa fa-check"></i><b>7.2</b> Possible applications</a></li>
-<li class="chapter" data-level="7.3" data-path="discussion.html"><a href="discussion.html#sae"><i class="fa fa-check"></i><b>7.3</b> SAE</a></li>
-<li class="chapter" data-level="7.4" data-path="discussion.html"><a href="discussion.html#next-steps"><i class="fa fa-check"></i><b>7.4</b> Next steps</a></li>
+<li class="chapter" data-level="6" data-path="simple-model.html"><a href="simple-model.html"><i class="fa fa-check"></i><b>6</b> Fitting a simple model</a><ul>
+<li class="chapter" data-level="6.1" data-path="simple-model.html"><a href="simple-model.html#loading-the-data"><i class="fa fa-check"></i><b>6.1</b> Loading the data</a></li>
+<li class="chapter" data-level="6.2" data-path="simple-model.html"><a href="simple-model.html#area-data"><i class="fa fa-check"></i><b>6.2</b> Area data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="simple-model.html"><a href="simple-model.html#spatial-dependency-with-area-data-data"><i class="fa fa-check"></i><b>6.2.1</b> Spatial dependency with <em>area data</em> data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="simple-model.html"><a href="simple-model.html#store-the-data-for-modelling"><i class="fa fa-check"></i><b>6.2.2</b> Store the data for modelling</a></li>
+<li class="chapter" data-level="6.2.3" data-path="simple-model.html"><a href="simple-model.html#split-the-sample-into-a-8020-training-and-validation-sets"><i class="fa fa-check"></i><b>6.2.3</b> Split the sample into a 80/20 training and validation sets</a></li>
+<li class="chapter" data-level="6.2.4" data-path="simple-model.html"><a href="simple-model.html#formula-specifying-the-relationship-between-the-outcome-variable-and-the-fixed-and-spatial-random-effects"><i class="fa fa-check"></i><b>6.2.4</b> Formula specifying the relationship between the outcome variable and the fixed and spatial random effects</a></li>
+<li class="chapter" data-level="6.2.5" data-path="simple-model.html"><a href="simple-model.html#fit-the-model-on-the-training-set"><i class="fa fa-check"></i><b>6.2.5</b> Fit the model on the training set</a></li>
+<li class="chapter" data-level="6.2.6" data-path="simple-model.html"><a href="simple-model.html#validate-the-model-on-the-validation-set"><i class="fa fa-check"></i><b>6.2.6</b> Validate the model on the validation set</a></li>
 </ul></li>
+<li class="chapter" data-level="6.3" data-path="simple-model.html"><a href="simple-model.html#point-referenced-data"><i class="fa fa-check"></i><b>6.3</b> Point-referenced data</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="simple-model.html"><a href="simple-model.html#spatial-dependency-with-point-referenced-data-data"><i class="fa fa-check"></i><b>6.3.1</b> Spatial dependency with <em>point-referenced data</em> data</a></li>
+<li class="chapter" data-level="6.3.2" data-path="simple-model.html"><a href="simple-model.html#store-the-data-for-modelling-in-a-stack"><i class="fa fa-check"></i><b>6.3.2</b> Store the data for modelling in a stack</a></li>
+<li class="chapter" data-level="6.3.3" data-path="simple-model.html"><a href="simple-model.html#formula-specifying-the-relationship-between-the-outcome-variable-and-the-fixed-and-spatial-random-effects-1"><i class="fa fa-check"></i><b>6.3.3</b> Formula specifying the relationship between the outcome variable and the fixed and spatial random effects</a></li>
+<li class="chapter" data-level="6.3.4" data-path="simple-model.html"><a href="simple-model.html#fit-the-model-on-the-training-set-1"><i class="fa fa-check"></i><b>6.3.4</b> Fit the model on the training set</a></li>
+<li class="chapter" data-level="6.3.5" data-path="simple-model.html"><a href="simple-model.html#validate-the-model-on-the-validation-set-1"><i class="fa fa-check"></i><b>6.3.5</b> Validate the model on the validation set</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="simple-model.html"><a href="simple-model.html#k-fold-cross-validation"><i class="fa fa-check"></i><b>6.4</b> <em>K-fold</em> cross-validation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="stepwise.html"><a href="stepwise.html"><i class="fa fa-check"></i><b>7</b> Stepwise Covariates Selection</a><ul>
+<li class="chapter" data-level="7.1" data-path="stepwise.html"><a href="stepwise.html#step-1-split-the-sample-into-a-602020-training-validation-and-test-sets"><i class="fa fa-check"></i><b>7.1</b> Step 1: Split the sample into a 60/20/20 training, validation and test sets</a></li>
+<li class="chapter" data-level="7.2" data-path="stepwise.html"><a href="stepwise.html#bundle-step-2-to-4-in-a-function"><i class="fa fa-check"></i><b>7.2</b> Bundle step 2 to 4 in a function</a></li>
+<li class="chapter" data-level="7.3" data-path="stepwise.html"><a href="stepwise.html#bundle-step-5-to-7-in-a-loop-ran-in-parallel"><i class="fa fa-check"></i><b>7.3</b> Bundle step 5 to 7 in a loop ran in parallel</a></li>
+<li class="chapter" data-level="7.4" data-path="stepwise.html"><a href="stepwise.html#step-8-inspect-the-results-and-select-specification"><i class="fa fa-check"></i><b>7.4</b> Step 8: Inspect the results and select specification</a></li>
+<li class="chapter" data-level="7.5" data-path="stepwise.html"><a href="stepwise.html#step-9-final-test"><i class="fa fa-check"></i><b>7.5</b> Step 9 Final test</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html"><i class="fa fa-check"></i><b>8</b> Results summary</a><ul>
+<li class="chapter" data-level="8.1" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html#goodness-of-fit-at-the-segmento-level"><i class="fa fa-check"></i><b>8.1</b> Goodness of fit at the <em>segmento</em> level</a></li>
+<li class="chapter" data-level="8.2" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html#segmento-level-map"><i class="fa fa-check"></i><b>8.2</b> <em>Segmento</em> level map</a></li>
+<li class="chapter" data-level="8.3" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html#goodness-of-fit-at-the-municipio-level"><i class="fa fa-check"></i><b>8.3</b> Goodness of fit at the <em>Municipio</em> level</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html#obtion-1-aggregating-results-at-the-municipio-level-using-all-segmentos"><i class="fa fa-check"></i><b>8.3.1</b> Obtion 1: Aggregating results at the municipio level using all <em>segmentos</em></a></li>
+<li class="chapter" data-level="8.3.2" data-path="summary-of-resuls.html"><a href="summary-of-resuls.html#option-2-aggregating-results-at-the-municipio-level-using-only-segmentos-in-representative-municipios"><i class="fa fa-check"></i><b>8.3.2</b> Option 2: Aggregating results at the municipio level using only <em>segmentos</em> in representative municipios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>9</b> Discussion</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="8" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>8</b> Primer on INLA</a><ul>
-<li class="chapter" data-level="8.1" data-path="theory.html"><a href="theory.html#area-data-vs-point-referenced-data"><i class="fa fa-check"></i><b>8.1</b> Area data vs point-referenced data</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="theory.html"><a href="theory.html#bayesian-approach"><i class="fa fa-check"></i><b>8.1.1</b> Bayesian approach</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="theory.html"><a href="theory.html#model-formulation"><i class="fa fa-check"></i><b>8.2</b> Model formulation</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="theory.html"><a href="theory.html#a-simple-model-not-accounting-for-spatial-dependence"><i class="fa fa-check"></i><b>8.2.1</b> A simple model not accounting for spatial dependence</a></li>
-<li class="chapter" data-level="8.2.2" data-path="theory.html"><a href="theory.html#a-spatial-model"><i class="fa fa-check"></i><b>8.2.2</b> A spatial model</a></li>
-<li class="chapter" data-level="8.2.3" data-path="theory.html"><a href="theory.html#estimating-the-model"><i class="fa fa-check"></i><b>8.2.3</b> Estimating the model</a></li>
-</ul></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="http://flowminder.org/" target="blank">Released by Flowminder Foundation</a></li>
 
@@ -189,7 +187,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High-resolution spatial modelling of population welfare in El Salvador, Phase II</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High-resolution spatial modelling of population welfare in El Salvador, a coding tutorial</a>
           </h1>
         </div>
 
@@ -198,14 +196,29 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">High-resolution spatial modelling of population welfare in El Salvador, Phase II</h1>
+<h1 class="title">High-resolution spatial modelling of population welfare in El Salvador, a coding tutorial</h1>
 <p class="author"><em>Xavier Vollenweider, Claudio Bosco</em></p>
-<p class="date"><em>2019-07-23</em></p>
+<p class="date"><em>2019-12-04</em></p>
 </div>
-<div id="prerequesite" class="section level1">
-<h1><span class="header-section-number">Section 1</span> Prerequesite</h1>
-<p>This report is written with the <strong>Markdown</strong> and the <strong>bookdown</strong> packages. Codes are available <strong>here</strong> and data are available on request.</p>
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Section 1</span> Introduction</h1>
+<p>The UN sustainable development goal number one (SDGs) is to end poverty in all its forms <em>everywhere</em> by 2030 while SDG goal number four and its 4.6 target aims at ensuring that all youth and a substantial proportion of adults, both men and women, achieve literacy and numeracy. The aim for the SDGs to be attained “everywhere” means that no one should be left behind. Therefore, populations at subnational levels and local heterogeneities are to be taken into account in national statistics, ensuring representative monitoring and optimised intervention planning. Mapping with great detail the geographic distribution of populations, of their chararacteristics and of the SDG indicators is hence a central tool for meeting the SDGs.</p>
+<p>National households surveys are typically representative at the regional level (administrativel level 1). However, the households conditions may vary at much finer scale. For instance, poverty level within a town and in rural areas of the same region can differ markedly. Similarly, poverty between rural towns and the neigbourings hamlet can exhbit large differences while local economic activities (e.g. the presence or absence of a manufacture) can largely determine SDGs outcomes. Information at higher resolution is hence required to support the efficient allocation of ressources across territories and the monitoring of SDG indicators.</p>
+<p>Conventional approaches to producing high resolution development indicators rely on Small Area Estimation (SAE) methods integrating household survey with census data to estimate the proportion of households in poverty. Household surveys, conducted every 1 to 5 years, have been improved through the introduction of geolocated survey clusters providing more fine-grained spatial data thanks to global positioning systems (GPS). In El Salvador, the national household survey <em>Encuesta de Hogares de Propositos Multiples</em> (EHPM) is conducted on an annual basis. Censuses, on the other hand, are typically undertaken irregularly, sometimes up to every 10 years, or longer in many low-income countries. In El Salvador, the last census was conducted in 2007. The reliance on the latter weakens the reliability of population estimates, preventing an ongoing monitoring of SDG indicators.</p>
+<p>Geo-referenced national household survey data provide an opportunity to achieve more spatially detailed, accurate and regular estimates of poverty distribution. To further improve these estimates, novel sources of spatial data are increasingly being utilised to fill in the outdated census gap. Continually collected information such as rainfall, temperature and vegetation, also called remote sensing and geographic information system data (RS), capture information related to agricultural productivity, while light at nights and distance to roads and cities refects access to markets and information and local economic dynamism.</p>
+<p>Spatial interpolation approaches consist of overlapping such data with more traditional sources such as survey-based data in order to produce regularly-updatable high-resolution maps of development indicators. Here we use spatial interpolation methods by integrating household survey cluster data with geospatial covariates to produce high-resolution poverty, income and literacy maps for El Salvador.</p>
+<p>This technical report provides a tutorial for how such methods can be used in this space, outlining the relevant data, how they can be processed, analysis and interpreted in the context of poverty, household income and literacy. The emphasis is put on providing reproducible codes and exemples. This report is hence foremost a coding tutorial for creating high resolution map of SDG indicators. All the RS data are open source.</p>
+<p>All codes to go from the <em>raw</em> data to high resolution mapping are provided as an attachement. This report is written with the <code>Markdown</code> <span class="citation">(Allaire et al. <a href="#ref-markdown">2019</a>)</span> and the <code>bookdown</code> <span class="citation">(Xie <a href="#ref-bookdown">2016</a>)</span> packages. The tutorial assumes that the reader is familiar with the open source statistical computing environment R. For a introductory book on using R, refer to <a href="https://cengel.github.io/R-intro/" class="uri">https://cengel.github.io/R-intro/</a>. For an introductory book on using Spatial Data with R, refer to <a href="https://cengel.github.io/R-spatial/" class="uri">https://cengel.github.io/R-spatial/</a>.</p>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-markdown">
+<p>Allaire, JJ, Jeffrey Horner, Yihui Xie, Vicent Marti, and Natacha Porte. 2019. <em>Markdown: Render Markdown with the c Library ’Sundown’</em>. <a href="https://CRAN.R-project.org/package=markdown" class="uri">https://CRAN.R-project.org/package=markdown</a>.</p>
+</div>
+<div id="ref-bookdown">
+<p>Xie, Yihui. 2016. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>.</p>
+</div>
 </div>
             </section>
 
@@ -213,16 +226,18 @@
         </div>
       </div>
 
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -265,8 +280,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
